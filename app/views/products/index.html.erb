@@ -1,10 +1,10 @@
-<h1>Products#index</h1>
 
 <h3>All Products: </h3>
-<ul> <!-- loops through products instance variable and displays the products and their details -->
+<!-- loops through products instance variable and displays the products and their details -->
+  <ul>
   <% @products.each do |product| %>
     <li>
       <%= link_to product.title, product_path(product) %> - $<%= product.price %> - Stock: <%= product.stock_quantity %>
     </li>
-  <% end %>
+  <% end %> <!-- wraps each product title in a link to its corresponding show page-->
 </ul>
