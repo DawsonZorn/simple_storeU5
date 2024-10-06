@@ -12,4 +12,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  Rails.application.routes.draw do
+    resources :products, only: [ :index ] # updates route to ensure index action is triggered by a get request
+    root "products#index"
+  end
 end
