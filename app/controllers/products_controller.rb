@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   def index
-    @products = Product.all # ensures the index loads all products in an instance variable
+    @products = Product.includes(:category).all # ensures the index loads all products in an instance variable and to prevent an N = 1 issue when loading the product with their respective category.
   end
 
   def show
