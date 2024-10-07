@@ -4,7 +4,7 @@
   <ul>
   <% @products.each do |product| %>
     <li>
-      <%= link_to product.title, product_path(product) %> - $<%= product.price %> - Stock: <%= product.stock_quantity %>
+      <%= link_to product.title, product_path(product) %> - $<%= product.price %> - Stock: <%= product.stock_quantity %> - Category: <%= product.category.name %> <!-- wraps each product title in a link to its corresponding show page-->
     </li>
-  <% end %> <!-- wraps each product title in a link to its corresponding show page-->
+  <% end %>
 </ul>
